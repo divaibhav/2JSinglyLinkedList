@@ -70,4 +70,44 @@ public class MySinglyLinkedList implements MySinglyLinkedListADT {
         }
 
     }
+
+    @Override
+    public void traverse() {
+
+    }
+
+    @Override
+    public int removeFirst() {
+        return 0;
+    }
+
+    @Override
+    public int removeLast() {
+        return 0;
+    }
+
+    @Override
+    public int first() {
+        /*if(isEmpty()){
+            return 0; //considering 0 as invalid data;
+        }
+        else{
+            return head.getData();
+        }*/
+        int response = 0;
+        if(!isEmpty()){
+            response = head.getData();
+        }
+        return response;
+    }
+
+    @Override
+    public int last() {
+        return 0;
+    }
+
+    @Override
+    public boolean search(int searchElement) {
+        return false;
+    }
 }
