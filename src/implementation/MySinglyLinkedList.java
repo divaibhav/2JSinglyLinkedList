@@ -73,6 +73,18 @@ public class MySinglyLinkedList implements MySinglyLinkedListADT {
 
     @Override
     public void traverse() {
+        System.out.println();
+        if(!isEmpty()){
+            Node temp = head;
+            while(temp != null){
+                System.out.print(temp.getData() + "-->");
+                temp = temp.getNext();
+            }
+            System.out.println("null");
+        }
+        else{
+            System.out.println("empty list");
+        }
 
     }
 
