@@ -164,6 +164,16 @@ public class MySinglyLinkedList implements MySinglyLinkedListADT {
 
     @Override
     public boolean search(int searchElement) {
-        return false;
+        boolean response = false;
+        Node temp = head;
+        while (temp != null){
+            if(temp.getData() == searchElement){
+                response = true;
+                break;
+            }
+            temp = temp.getNext();
+        }
+
+        return response;
     }
 }
