@@ -5,4 +5,5 @@ public interface MySinglyLinkedListADT {
     void addLast(int element);
     boolean isEmpty();
     int size();
+    void addLastWithoutUsingTail(int element);
 }

@@ -49,4 +49,24 @@ public class MySinglyLinkedList implements MySinglyLinkedListADT {
     public int size(){
         return size;
     }
+
+    @Override
+    public void addLastWithoutUsingTail(int element) {
+        Node node = new Node(element);
+        if(isEmpty()){
+            head = node;
+            tail = node;
+        }
+        else{
+            //traverse till you find the last node
+            Node temp = head;
+            while(temp.getNext() != null){
+                //update temp
+                //this process is know as link hopping or pointer hopping
+                temp = temp.getNext();
+            }
+            temp.setNext(node);
+            tail = node;
+        }
+    }
 }
