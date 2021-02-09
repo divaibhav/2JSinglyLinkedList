@@ -103,7 +103,12 @@ public class MySinglyLinkedList implements MySinglyLinkedListADT {
 
     @Override
     public int last() {
-        return 0;
+        if(isEmpty()){
+            return 0;
+        }
+        else{
+            return tail.getData();
+        }
     }
 
     @Override
