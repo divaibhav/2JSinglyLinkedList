@@ -68,5 +68,6 @@ public class MySinglyLinkedList implements MySinglyLinkedListADT {
             temp.setNext(node);
             tail = node;
         }
+
     }
 }
