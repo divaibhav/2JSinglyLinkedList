@@ -176,4 +176,38 @@ public class MySinglyLinkedList implements MySinglyLinkedListADT {
 
         return response;
     }
+
+    @Override
+    public int removeGivenNode(int givenElement) {
+        int response = 0;//considering 0 as invalid
+        if(!isEmpty()){
+            Node temp = head;
+            Node previous = null;
+            while(temp != null){
+                if(temp.getData() == givenElement){
+                    break;
+                }
+                previous = temp ;
+                temp = temp.getNext();
+            }
+            if(temp != null){
+                response = temp.getData();
+                //single node
+                if(previous == null){
+                    head = null;
+                    tail = null;
+
+                }
+                else{
+                    //multiple nodes
+                    previous.setNext(temp.getNext());
+                    if(temp == tail){
+                        tail = previous;
+                    }
+                }
+                size--;
+            }
+        }
+        return response;
+    }
 }

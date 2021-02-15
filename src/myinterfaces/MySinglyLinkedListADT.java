@@ -12,4 +12,6 @@ public interface MySinglyLinkedListADT {
     int first();
     int last();
     boolean search(int searchElement);
+    int removeGivenNode(int givenElement);
+
 }
