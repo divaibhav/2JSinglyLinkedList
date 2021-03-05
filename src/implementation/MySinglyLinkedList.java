@@ -210,4 +210,31 @@ public class MySinglyLinkedList implements MySinglyLinkedListADT {
         }
         return response;
     }
+    //print linked list by recursion in reverse
+    public void traverseReverse(Node node){
+        if(node == null){
+            return;
+        }
+        else{
+            traverseReverse(node.getNext());
+            System.out.print(node.getData() + ", ");
+        }
+    }
+
+    public Node getHead() {
+        return head;
+    }
+
+    public void reverse(Node node, Node previous){
+        if(node.getNext() == null){
+            tail = head;
+            head = node;
+            node.setNext(previous);
+        }
+        else {
+            //previous = node;
+            reverse(node.getNext(), node);
+            node.setNext(previous);
+        }
+    }
 }
